@@ -1,0 +1,133 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 14pt;
+  background-color: #ffffff;
+}
+
+
+/* cột trên  */
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #f50a88;
+  color:white;
+  height: 160px;
+  padding:  20px;
+}
+
+.header img {
+  width: 100px;
+  margin-left: 70px
+}
+
+.header h1 {
+  color: white;
+  text-align: center;
+  font-size: 40pt;
+  text-shadow: 4px 4px 8px #000000;
+  flex-grow: 1;
+}
+
+/* Column 1 - Gallery / Menu */
+.col1 {
+  overflow: hidden;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  background-color:#0AF577;
+
+}
+
+.col1 ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.col1 a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 12px 10px;
+  text-decoration: none;
+}
+
+.col1 a:hover {
+  background-color: white;
+  color: green;
+}
+
+.youtube {
+
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow:1;
+}
+.youtube h3{ text-align: center;
+color: blue}
+.youtube iframe {width:350PX; height:auto; align-items:center;}
+/* nội dung  */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+
+
+
+
+/* Cột 2 */
+.col2 {
+  width: 70%;
+  padding: 16px;
+}
+
+
+
+.col2 h3 {
+  text-align: center;
+  color: tomato;
+}
+
+.col2 p {
+  text-align: justify;
+  font-size: 14pt;
+  line-height: 1.5;
+}
+.col2 img{
+  float:right;
+  padding-left: 16px;
+  width: 350px;
+  height:auto;
+  padding-left:14px; 
+ 
+}
+.dropcap {
+  float: left;
+  font-size: 60pt;
+  color:blue;
+  line-height: 40px;
+  margin-right: 10px;
+}
+
+/*Phần Footer*/
+ .footer {background-color:#f50a88;
+		padding: 10px 0;
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;}		
+	.footer p {margin-left: 100px;
+			font-size: 12pt;
+			color: white;}
+	.footer img {width: 90px;}

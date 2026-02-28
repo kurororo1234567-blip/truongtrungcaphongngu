@@ -1,0 +1,143 @@
+/* --- 1. CÀI ĐẶT CHUNG --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 14pt;
+  background-color: #f0fdf4; /* Nền trắng xanh nhạt */
+  color: #1a2e1a; /* Chữ xanh đen */
+}
+
+/* --- 2. ĐẦU TRANG (HEADER) --- */
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #22c55e; /* Màu xanh lá chính */
+  color: white;
+  height: 160px;
+  padding: 0 40px;
+}
+
+.header img {
+  width: 100px;
+  margin-right: 20px;
+}
+
+.header h1 {
+  text-align: center;
+  font-size: 35pt;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  flex-grow: 1;
+}
+
+/* --- 3. THÂN TRANG (CONTENT) --- */
+.content {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+/* Cột 1: Menu và Video */
+.col1 {
+  width: 30%;
+  background-color: #dcfce7; /* Nền menu xanh nhạt */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.col1 ul { list-style: none; }
+
+.col1 a {
+  display: block;
+  color: #15803d; /* Chữ menu xanh đậm */
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px solid #bbf7d0;
+}
+
+.col1 a:hover {
+  background-color: #16a34a; /* Di chuột đổi màu xanh lá đậm */
+  color: white;
+}
+
+.youtube {
+  background-color: #f1f1f1;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.youtube h3 { color: #15803d; margin-bottom: 10px; }
+
+.youtube iframe { width: 90%; aspect-ratio: 16/9; }
+
+/* Cột 2: Bài viết */
+.col2 {
+  width: 68%;
+  padding: 16px;
+}
+
+.col2 h3 {
+  text-align: center;
+  color: #c2410c; /* Tiêu đề màu cam đậm cho nổi bật trên nền xanh */
+  margin-bottom: 20px;
+}
+
+.col2 p { text-align: justify; line-height: 1.6; }
+
+.col2 img {
+  float: right;
+  width: 350px;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.dropcap {
+  float: left;
+  font-size: 60pt;
+  color: #16a34a; /* Chữ cái đầu dòng xanh lá */
+  line-height: 50px;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+/* --- 4. CHÂN TRANG (FOOTER) --- */
+.footer {
+  background-color: #14532d; /* Xanh lá cực đậm */
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.footer img {
+  width: 90px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+/* --- 5. TƯƠNG THÍCH ĐIỆN THOẠI (Dưới 768px) --- */
+@media screen and (max-width: 768px) {
+  .header { flex-direction: column; height: auto; padding: 20px; }
+  .header h1 { font-size: 22pt; }
+  
+  .content { flex-direction: column; }
+  .col1, .col2 { width: 100%; }
+
+  /* Menu chia 2 cột và căn giữa nút Đăng nhập */
+  .col1 ul { display: flex; flex-wrap: wrap; justify-content: center; }
+  .col1 li { width: 50%; text-align: center; }
+  .col1 li:last-child { width: 100%; } /* Nút Đăng nhập vào giữa */
+
+  .col2 img { float: none; width: 100%; padding-left: 0; }
+  .footer { flex-direction: column; text-align: center; }
+  .footer p { margin-bottom: 15px; }
+}
